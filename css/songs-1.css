@@ -1,0 +1,163 @@
+/* 页面整体背景设置 */
+body {
+    background-image: url('../images/songs-9.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+/* 为内容区域添加半透明遮罩，提高文字可读性 */
+.main-content,
+.nav {
+    position: relative;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* 黑色半透明遮罩 */
+}
+
+/* 调整内容区域的内边距，确保视觉效果 */
+.main-content {
+    padding: 20px;
+}
+
+/* 响应式设计调整，确保背景图片在不同设备上显示良好 */
+@media (max-width: 768px) {
+    body {
+        background-size: auto 100%;
+    }
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #eadfdf;
+}
+
+/* 左侧导航指示器 */
+.nav-indicator {
+    position: fixed;
+    left: 20px;
+    top: 120px;
+    /* 调整：从导航栏下方开始 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+}
+
+/* 竖状提示词样式 */
+.vertical-prompt {
+    position: fixed;
+    left: 0px;
+    top: 300px;
+    writing-mode: vertical-rl;
+    /* 竖排文字 */
+    text-align: center;
+    color: #e5dfdf;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 5;
+    transform: rotate(0deg);
+    /* 调整文字方向 */
+}
+
+.vertical-prompt p {
+    margin: 0;
+    padding: 10px;
+    background-color: rgba(139, 13, 13, 0.9);
+    /* 半透明背景 */
+    border-radius: 5px;
+    white-space: nowrap;
+    /* 防止文字换行 */
+}
+
+/* 响应式设计：在小屏幕上隐藏提示词 */
+@media (max-width: 768px) {
+    .vertical-prompt {
+        display: none;
+    }
+}
+
+.indicator-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff8f8;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator-dot.active {
+    background-color: #be0e6f;
+    transform: scale(1.2);
+}
+
+/* 主内容区域 */
+.main-content {
+    flex: 1;
+    margin-left: 60px;
+    padding: 40px;
+    margin-top: 70px;
+    /* 新增：导航栏高度 */
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #ab2323;
+}
+
+.music-themes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.theme-card {
+    background: rgb(243, 238, 238);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(139, 13, 13, 0.961);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.theme-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(139, 13, 13, 0.836);
+}
+
+.theme-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.theme-info {
+    padding: 20px;
+}
+
+.theme-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f60707;
+}
+
+.theme-desc {
+    color: #b31e1e;
+    line-height: 1.6;
+}

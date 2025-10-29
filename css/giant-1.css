@@ -1,0 +1,125 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url("../images/giant-10.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: #222;
+    color: #fff;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #ffcc00;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 204, 0, 0.8);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ff0000;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.section-content:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+}
+
+.section-content h2 {
+    color: #ff0000;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.giant {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid #ff0000;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.giant:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 0, 0.8);
+}
+
+.giant-image {
+    flex: 0 0 30%;
+    text-align: center;
+}
+
+.giant-image img {
+    max-width: 250px;
+    max-height: 350px; /* 调整为适合竖图的高度 */
+    width: auto;
+    height: auto;
+    margin-bottom: 10px;
+    border: 3px solid #ffcc00;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.giant-image img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+    border-color: #ff6600;
+}
+
+.giant-details {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.giant-details h2 {
+    color: #ff0000;
+    text-shadow: 2px 2px 4px #000;
+    font-size: 22px;
+}
+
+.giant-info {
+    text-align: left;
+}
+
+.giant-info p {
+    font-size: 16px;
+    text-shadow: 1px 1px 2px #000;
+    margin-bottom: 5px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .section-content {
+        margin: 10px;
+    }
+
+    .giant {
+        flex-direction: column;
+    }
+
+    .giant-image {
+        flex: 1;
+        width: 100%;
+    }
+
+    .giant-details {
+        padding-left: 0;
+    }
+}
